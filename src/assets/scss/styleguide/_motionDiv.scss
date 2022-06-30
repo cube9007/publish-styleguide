@@ -1,0 +1,122 @@
+.basicMotionDiv {
+    width: 100px;
+    height: 100px;
+    background-color: $primary;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.container {
+    padding: 200px 0 100px 0;
+    
+    perspective: 800px;
+    width: 200px;
+    height: 200px;
+}
+
+.dragArea {
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: rgb(235,49,117,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drag {
+    position: relative;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+    background-color: $primary;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.drag2 {
+    position: relative;
+    margin-left: -100px;
+    width: 100px;
+    height: 100px;
+    background-color: #89eed0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.drag3 {
+    position: relative;
+    margin-left: -100px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffa115;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.trigger {
+    margin: 100px 0;
+    width: 100px;
+    height: 100px;
+    background-color: $primary;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    
+}
+.side_front,
+.side_right,
+.side_back,
+.side_left,
+.side_top,
+.side_bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0.6;
+}
+
+.side_front {
+    transform: rotateY(0deg) translateZ(100px);
+    background-color: #ee4444;
+}
+.side_right {
+    transform: rotateY(90deg) translateZ(100px);
+    background-color: #ffcc00;
+}
+.side_back {
+    transform: rotateY(180deg) translateZ(100px);
+    background-color: #ff0055;
+}
+.side_left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: #8855ff;
+}
+.side_top {
+    transform: rotateX(90deg) translateZ(100px);
+    background-color: #0099ff;
+}
+.side_bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+    background-color: #22cc88;
+}

@@ -1,0 +1,51 @@
+.m-icon {
+    padding: 10px;
+}
+.icon-div {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.icon-box-2group,
+.icon-onebox
+{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+.icon-onebox {
+    width: 300px;
+    padding: 15px;
+}
+
+@each $title, $color in $iconColor {
+    .icon-#{$title} {
+        width: 30px;
+        height: 24px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 15px;    
+        background: $color;
+    }
+}
+.con-icon {
+    color:white;
+}
+.icon-p {
+    margin-left: 10px;
+    color: $gray_light;
+    font-size: 14px;
+}
+.icon-btn-icon {
+    color: $gray_light;
+}
+
+.icon-btn1 {
+    border: $gray_light2 1px solid;
+    color: $input_border_dark;
+    :hover {
+        background: red;
+    }
+}

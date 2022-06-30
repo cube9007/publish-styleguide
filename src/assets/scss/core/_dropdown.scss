@@ -1,0 +1,128 @@
+.box {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    &-sbox1, 
+    &-sbox3 {
+        display: flex;
+        width: 120px;
+    }
+    &-sbox2 {
+        height: 75px;
+        display: flex;
+        flex-grow: 6;
+        align-items: center;
+        justify-content: center;
+        &:hover~&-drop{
+            display: flex;
+        }
+        &-drop{
+            background: rgb(0,0,0,0.025);
+            box-shadow: 0 5px 3px 0px rgb(0,0,0,0.05);
+            backdrop-filter: blur(10px);
+            display: none;
+            position: absolute;
+            width: 99.95%;
+            margin-top: 277px;
+            margin-left: -30px;
+            height: 200px;
+            &:hover {
+                display: flex;
+            }
+            &-menu {
+                display: flex;
+                justify-content: center;
+                flex-grow: 1;
+                margin-left: 70px;
+                &-noxsmall {
+                    &:hover>&-xsmall {
+                        display: block;
+                        transition: 0.5s;
+                    }
+                    &-expandicon {
+                        font-size: 5px;
+                    }
+                    &-xsmall {
+                        margin-top: 10px;
+                        margin-bottom: -10px;
+                        display: none;
+                        transition: 0.5s;
+                        &>li {
+                            font-size: 12px;
+                            padding: 5px 0 5px 0;
+                            transition: 0.5s;
+                        }
+                        &>li>a:hover {
+                            font-size: 13px;
+                            color: $primary;
+                            transition: 0.5s;
+                        }
+                        &:hover {
+                            display: block;
+                            transition: 0.5s;
+                        }
+                        
+                    }
+                }
+                &>ul {
+                    width: 150px;
+                    padding-top: 20px;
+                    &>li {
+                        font-size: 15px;
+                        padding: 10px 0 10px 0;
+                        transition: 0.5s;
+                        &:hover{
+                            transition: 0.5s;
+                            &>a{
+                                font-size: 16px;
+                                color: $primary;
+                                transition: 0.5s;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &-p{
+            font-size: 20px;
+            font-weight: bold;
+            width: 150px;
+            text-align: center;
+            transition: 0.5s;
+            &>a {
+                color: white;
+            }
+            &:hover {
+                font-size: 22px;
+                transition: 0.5s;
+            }
+        }
+    }
+    &-sbox3 {
+        justify-content: flex-end;
+    }
+}
+.menu {
+    &-item {
+        width: 200px;
+        padding: 0;
+        margin: 0;
+        height: 45px;
+        
+        &-item {
+            height: 35px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+        }
+        // &-divider {
+        //     color: rgb(0,0,0,0);
+        // }
+    }
+    &-accordion {
+        &:hover {
+            background: rgb(0,0,0,0.05);
+        }
+    }
+}

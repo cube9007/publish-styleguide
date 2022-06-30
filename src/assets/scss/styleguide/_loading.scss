@@ -1,0 +1,18 @@
+.loading-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.circularProgress {
+    margin-right: 20px;
+}
+.linearProgress {
+    margin-bottom: 20px;
+}
+.progresslabel {
+    margin-top: -27px;
+    &>p {
+        font-size: 10px;
+    }
+}

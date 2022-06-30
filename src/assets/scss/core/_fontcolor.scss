@@ -1,0 +1,64 @@
+.color-div1,
+.color-div2,
+.color-div3,
+.color-div4,
+.color-div5,
+.color-div6,
+.color-div7,
+.color-div8,
+.color-div9,
+.color-div10,
+.color-div11,
+.color-div12 {
+    height: 70px;
+    width: 70px;
+    border-radius: 10px;
+}
+.color-div1 {
+    background: $primary;
+}
+.color-div2 {
+    background: $secondary;
+}
+.color-div3 {
+    background: $error;
+}
+.color-div4 {
+    background: $filled
+}
+.color-div5 {
+    background: $disabled;
+}
+.color-div6 {
+    background: $filled_point;
+}
+.color-div7 {
+    background: $button_border;
+}
+.color-div8 {
+    background: $input_border;
+}
+.color-div9 {
+    background: $input_border_dark;
+}
+.color-div10 {
+    background: $line;
+}
+.color-div11 {
+    background: $line_light;
+}
+.color-div12 {
+    background: $line_dark;
+}
+.color-box-3group,
+.color-onebox {
+    display: flex;
+    flex-grow: 1;
+}
+
+.color-box-3group {
+    margin: 25px 0 25px 0;
+}
+.color-onebox {
+    width: 100px;
+}

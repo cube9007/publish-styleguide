@@ -1,0 +1,44 @@
+.home-box {
+    margin: 100px;
+    padding: 50px;
+    border: 1px solid #ccc; 
+    border-radius: 15px;
+    &>ul>li {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.home-a {
+    padding: 5px 0 5px 0;
+    color: black;
+    font-size: 18px;
+    background: white;
+    
+}
+.box-arrow {
+    padding: 5px 0 5px 0;
+    display: none;
+    color: rgb(0,0,0,0);
+    
+} 
+
+.home-a:hover {
+    color: $primary;
+    transition: 0.5s;
+    display:flex;
+}
+
+.home-a:hover ~ .box-arrow {
+    display: block;
+    color: $primary;
+    transition: 0.5s;
+    margin-left: 25px;
+} 
+
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+.banner {
+    &-image {
+        height: 700px;
+        overflow: hidden;
+    // 자동 슬라이드
+
+        // &>ul{
+        //     width: calc(100% * 4);
+        //     display: flex;
+        //     animation: slidebanner 20s infinite;
+        //     &>li {
+        //         width: calc(100% /4);
+        //         height: 700px;
+        //         &:nth-child(1) { 
+        //             background: url(../../images/visual1.jpg) no-repeat; 
+        //             background-size: 130%;
+        //         }
+        //         &:nth-child(2) { 
+        //             background: url(../../images/visual2.jpg) no-repeat; 
+        //             background-size: 130%;
+        //         }
+        //         &:nth-child(3) { 
+        //             background: url(../../images/visual3.jpg) no-repeat; 
+        //             background-size: 130%;
+        //         }
+        //         &:nth-child(4) { 
+        //             background: url(../../images/visual4.jpg) no-repeat; 
+        //             background-size: 130%;
+        //         }
+        //     }
+        //     @keyframes slidebanner {
+        //         0% {margin-left:0;} 
+        //         10% {margin-left:0;} 
+        //         15% {margin-left:0;} 
+        //         25% {margin-left:-100%;} 
+        //         35% {margin-left:-100%;} 
+        //         40% {margin-left:-100%;} 
+        //         50% {margin-left:-200%;}
+        //         60% {margin-left:-200%;}
+        //         65% {margin-left:-200%;}
+        //         75% {margin-left:-300%;}
+        //         85% {margin-left:-300%;}
+        //         90% {margin-left:-300%;}
+        //         100% {margin-left:0;}
+        //     }
+        // }
+
+
+    // 자동페이드
+        &>ul {
+            position: relative;
+            height: 100%;
+            &>li {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                opacity: 0;
+                animation: fadebanner 20s infinite ;
+                @keyframes fadebanner {
+                    0% {opacity:0;}
+                    5% {opacity:1;}
+                    25% {opacity:1;}
+                    30% {opacity:0;}
+                    95% {opacity:0;}
+                    100% {opacity:0;}
+                  }
+                &:nth-child(1) { 
+                    background: url(../../images/visual1.jpg) no-repeat; 
+                    background-size: cover;
+                    min-height: 700px;
+                    animation-delay:0s
+                }
+                &:nth-child(2) { 
+                    background: url(../../images/visual2.jpg) no-repeat; 
+                    background-size: cover;
+                    min-height: 700px;
+                    animation-delay:5s
+                }
+                &:nth-child(3) { 
+                    background: url(../../images/visual3.jpg) no-repeat; 
+                    background-size: cover;
+                    min-height: 700px;
+                    animation-delay:10s
+                }
+                &:nth-child(4) { 
+                    background: url(../../images/visual4.jpg) no-repeat; 
+                    background-size: cover;
+                    min-height: 700px;
+                    animation-delay:15s
+                }
+            }
+        }
+    }
+    &-contents {
+        position: relative;
+        margin-top: -700px;
+        height: 700px;
+        width: 100%;
+        background: rgb(0,0,0,0.4);
+        &-strong {
+            padding: 0 50px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            &>a {
+                transition: 0.5s;
+                &:hover>strong {
+                    color: $primary;
+                    transition: 0.5s;
+                }
+                display: flex;
+                align-items: center;
+                color: white;
+            }
+            &-nextree {
+                display: flex;
+                align-items: center;
+                font-size: 45px;
+                &>p {
+                    color: $primary;
+                }
+            }
+            &-p {
+                margin-top: 3px;
+                margin-left: 10px;
+                line-height: 110%;
+            }
+        }
+        &-box {
+            display: flex;
+            align-items: center;
+            padding: 0 70px;
+            height: 550px;
+            &-desc {
+                color: white;
+                margin-top: -80px;
+                flex-grow: 1;
+                &>strong {
+                    font-size: 50px;
+                }
+                &>p {
+                    font-size: 20px;
+                }
+            }
+            &-login {
+                padding: 40px;
+                background-color: white;
+                border-radius: 10px;
+                margin-top: -80px;
+                display: flex;
+                flex-direction: column;
+                &>p {
+                    display: flex;
+                    align-items: center;
+                    &:nth-child(1) {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        &>strong>b {
+                            color: $primary;
+                        }
+                    }
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    &:nth-child(3) {
+                        margin-left: -10px;
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: $input_border_dark;
+                    }
+                    &:nth-child(4) {
+                        margin-top: 3px;
+                    }
+                    &:nth-child(5) {
+                        color: $input_border_dark;
+                        font-weight: bold;
+                        font-size: 13px;
+                        display: flex;
+                        padding: 30px 0 0 0;
+                        justify-content: space-between;
+                        &>a:hover {
+                            color: $primary;
+                            transition: 0.5s;
+                        }
+                        &>div>a {
+                            &:hover {
+                                color: $primary;
+                                transition: 0.5s;
+                            }
+                            &::after {
+                                content: '|';
+                                margin: 0 15px;
+                                color: $input_border;
+                            }
+                        }
+                            
+                    }
+                }
+                &-field {
+                    width: 300px;
+                    height: 55px;
+                    margin: 5px 0;
+                }
+                &-button {
+                    width: 300px;
+                    height: 55px;
+                    &>p {
+                        font-weight: bold;
+                        font-size: large;
+                    }
+                }
+            }
+        }
+    }
+    &-progress {
+        width: 100%;
+        height: 6px;
+        margin-top: -6px;
+        background-color: black;
+        opacity: 20%;
+        &-line {
+            width: 100%;
+            position: relative;
+            margin-top: -6px;
+            height: 6px;
+            background-color: $primary;
+            opacity: 1;
+            animation: progress 5s infinite;
+            @keyframes progress {
+                0% {width: 0%;} 
+                // 20% {width: 20%;} 
+                // 40% {width: 40%;} 
+                // 60% {width: 60%;} 
+                // 80% {width: 80%;} 
+                100% {width: 100%;} 
+            }
+        }
+    }
+}

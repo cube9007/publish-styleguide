@@ -1,0 +1,163 @@
+.sidemenuall {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.sidemenu280 {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    &-logo {
+        z-index: 3;
+        height: 75px;
+        box-shadow: 0 1px 0 0 rgb(224,224,224,0.5);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &>h1>a {
+            color: $primary;
+        }
+    }
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        box-shadow: 1px 0px 15px 0 rgb(224,224,224,0.5);
+        padding-top: 30px;
+        &-avatar {
+            width: 105px;
+            height: 95px;
+            padding: 0;
+            border: 1px solid $line_light;
+            border-radius: 33px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-person {
+                color: $gray_light;
+            }
+        }
+        &-namebox {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            &-p {
+                font-size: 16px;
+                font-weight: bold;
+                &>a {
+                    color: $primary;
+                }
+            }
+            
+        }
+        &-insa {
+            font-size: 12px;
+            color: $gray_light;
+            margin-top: 5;
+            margin-bottom: 20px;
+        }
+        &-accordion {
+            width: 280px;
+            &-summary {
+                height: 60px;
+                display: flex;
+                align-items: center;
+                &-icon {
+                    color: $primary;
+                    margin-right: 10px;
+                }
+            }
+            &-details {
+                &>ul>li {
+                    font-size: 14px;
+                    margin-left: 20px;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    padding: 10px 0 10px 0;
+                    align-items: center;
+                    &>a {
+                        margin-left: 10px;
+                        display: flex;
+                        flex-grow: 1;
+                        transition: 0.5s;
+                        &:hover {
+                            color: $primary;
+                            transition: 0.5s;
+                        }
+                        &:hover ~ .sidemenu280-menu-accordion-details-arrow {
+                            display: flex;
+                            color: $primary;
+                            margin-right: 0;
+                            margin-left: 10px;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+                &-arrow {
+                    display: none;
+                    color: rgb(0,0,0,0);
+                    margin-right: 10px;
+                    margin-left: 0px;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    &-appbar {
+        height: 75px;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        &-check {
+            display: none;
+            &:checked ~ .sidemenu280 {
+                display: none;
+            }
+            &:checked ~ .contents>.contents-appbar>.logo2 {
+                display: block;
+            }
+        }
+        &-menuopen {
+            margin-left: 30px;
+            color: white;
+        }
+        &-rightbox {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row-reverse;
+            margin-right: 30px;
+            height: 75px;
+        }
+    }
+    &-area {
+        height: calc(100vh - 75px);
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $line;
+            border-radius: 5px;
+            margin: 3px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: white;
+            border-radius: 5px;
+        }
+    }
+}
+.logo2 {
+    display: none;
+    margin-left: 27px;
+    &>a {
+        color: white;
+    }
+}

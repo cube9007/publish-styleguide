@@ -1,0 +1,132 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    line-height: 160%;
+    margin: 0;
+    padding: 0;
+}
+
+.common-div {
+    text-align: center;
+}
+.common-p {
+    font-size: 18px;
+}
+.common-p2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    li {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.icon-white {
+    color: white;
+}
+.common-box {
+    margin: 100px;
+}
+.common-box2,
+.common-box3 {
+    border: 1px solid #ccc;
+    border-radius: 15px; 
+    margin-bottom: 50px;
+}
+.common-box2 {
+    display: flex; 
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.big-div {
+    background: $primary;
+    border: 1px solid rgb(0,0,0,0);
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    h1 {
+        color:white;
+        a {
+            color: white;
+        }
+    }
+}
+.logo {
+    color: white;
+}
+.code {
+    padding: 50px;
+}
+.guideBox {
+    border: 1px solid $button_border;
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 10px 0 20px 0;
+    &-Box {
+        display: flex;
+        flex-grow: 1;
+    }
+    &-Box:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+.guideBoxCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $button_border;
+    border-radius: 15px;
+    padding: 20px 30px;
+    margin: 10px 0 20px 0;
+    &-Box {
+        display: flex;
+        flex-grow: 1;
+    }
+    &-Box:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+}
+.styleguide {
+    &-content {
+        padding: 30px 200px;
+        height: calc(100vh - 140px);
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $line;
+            border-radius: 5px;
+            margin: 3px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: white;
+            border-radius: 5px;
+        }
+    }
+    &-h2 {
+        color: $primary;
+    }
+    &-p {
+        color: $gray_deep;
+    }
+}
+.codemirror {
+    padding: 15px;
+    background-color: $codemirror;
+    border-radius: 15px;
+}

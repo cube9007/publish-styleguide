@@ -1,0 +1,15 @@
+.CardMedia {
+    &_Nextree {
+        background: url(../../images/visual4.jpg) no-repeat; 
+        height: 200px;
+        background-size: cover;
+    }
+    &_Image1 {
+        background: url(../../images/visual3.jpg) no-repeat; 
+        height: 140px;
+    }
+    &_Image2 {
+        background: url(../../images/visual2.jpg) no-repeat; 
+        width: 150px;
+    }
+}
